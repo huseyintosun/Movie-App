@@ -1,9 +1,9 @@
 import React, { useContext } from "react";
-// import { useHistory } from "react-router-dom";
+ import { useHistory } from "react-router-dom";
 import { AuthContext } from "../context/AuthContext";
-// import { signOut } from "../auth/firebase";
+ import { signOut } from "../auth/firebase";
 const Navbar = () => {
-  // const history = useHistory();
+   const history = useHistory();
   const { currentUser } = useContext(AuthContext);
   return (
     <div>
@@ -19,7 +19,7 @@ const Navbar = () => {
               <button
                 type="button"
                 className="ms-2 btn btn-outline-light"
-                // onClick={() => history.push("/login")}
+                 onClick={() => history.push("/login")}
               >
                 Login
               </button>
@@ -28,7 +28,7 @@ const Navbar = () => {
               <button
                 type="button"
                 className="ms-2 btn btn-outline-light"
-                // onClick={() => signOut()}
+                 onClick={() => signOut()}
               >
                 Logout
               </button>
@@ -36,7 +36,7 @@ const Navbar = () => {
               <button
                 type="button"
                 className="ms-2 btn btn-outline-light"
-                // onClick={() => history.push("/register")}
+                 onClick={() => history.push("/register")}
               >
                 Register
               </button>

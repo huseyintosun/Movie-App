@@ -1,4 +1,4 @@
-// import { useContext } from "react"
+ import { useContext } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "../pages/Main";
 import Register from "../pages/Register";
@@ -12,6 +12,7 @@ const AppRouter = () => {
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <Route exact path="/" component={Main} />
+        <Route exact path="/Movie-App" component={Main} />
       </Switch>
     </Router>
   );

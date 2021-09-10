@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import {createUser, signUpProvider} from '../auth/firebase';
-// import { useHistory } from "react-router-dom";
+ import { useHistory } from "react-router-dom";
 const Register = () => {
-  // const history = useHistory();
+   const history = useHistory();
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -10,13 +10,13 @@ const Register = () => {
   const handleSubmit = () => {
     const user = {firstName, lastName, email, password};
     const displayName = `${firstName} ${lastName}`;
-    // createUser(user.email, user.password, displayName);
-    // history.push('/');
+     createUser(user.email, user.password, displayName);
+     history.push('/');
   }
-  // const handleProviderRegister = () => {
-  //   signUpProvider();
-  //   history.push('/');
-  // }
+   const handleProviderRegister = () => {
+     signUpProvider();
+     history.push('/');
+   }
   return (
     <div className="register">
       <div className="form-image">
@@ -44,7 +44,7 @@ const Register = () => {
           <input type="button" class="btn btn-primary form-control" value="Register" onClick={handleSubmit} />
         </form>
         <button class="btn btn-primary form-control" 
-        // onClick={handleProviderRegister}
+         onClick={handleProviderRegister}
         >Continue with Google</button>
       </div>
     </div>
