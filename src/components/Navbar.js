@@ -9,7 +9,7 @@ const Navbar = () => {
     <div>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/" style={{ color: "white" }}>
+          <a className="navbar-brand" href="/Movie-App" style={{ color: "white" }}>
             React Movie App
           </a>
           <div className="buttons">
